@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /mentions-légales
+
+Allow: /
+
+Sitemap: https://sebastien-dev.fr/sitemap.xml
