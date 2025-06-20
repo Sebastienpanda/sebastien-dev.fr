@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../../core/layouts/header';
 import { HeroSection } from '../components/hero-section/hero';
 import { About } from '../components/about/about';
 import { SkillsSection } from '../components/skills-section/skills-section';
@@ -14,7 +13,6 @@ import { Footer } from '../../../core/layouts/footer';
     selector: 'app-home',
     templateUrl: './home.html',
     imports: [
-        HeaderComponent,
         HeroSection,
         About,
         SkillsSection,

@@ -11,7 +11,8 @@
     <nav class="hidden lg:block">
         <app-navigation-item (toggleMenu)="toggleMenu()"/>
     </nav>
-    <button (click)="toggleTheme()" class="ml-4 transition hover:text-primary cursor-pointer hidden lg:block">
+    <button (click)="toggleTheme()" class="ml-4 transition hover:text-primary cursor-pointer hidden lg:block"
+            aria-label="Changer de thème">
         @if (themeService.theme() === 'light') {
             <lucide-icon [img]="Sun"/>
         } @else {

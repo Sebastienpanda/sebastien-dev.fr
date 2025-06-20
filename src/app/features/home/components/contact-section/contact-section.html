@@ -56,7 +56,7 @@
                     <label for="subject" class="label">
                         <span>Sujet</span>
                     </label>
-                    <select class="select w-full" [value]="selectedServiceId() ?? ''"
+                    <select id="subject" class="select w-full" [value]="selectedServiceId() ?? ''"
                             (change)="selectedServiceId.set($any($event.target).value)"
                             formControlName="service"
                             [class.select-error]="serviceErrors">
