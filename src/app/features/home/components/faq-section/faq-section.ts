@@ -33,7 +33,7 @@ export class FaqSection {
         },
         {
             question: 'Travaillez-vous seul ou en équipe ?',
-            answer: 'Je travaille seul mais je peux collaborer avec d\'autres freelances ou intégrer une équipe.',
+            answer: 'Je travaille seul et je peux collaborer avec d\'autres freelances ou intégrer une équipe.',
         },
     ]);
 }

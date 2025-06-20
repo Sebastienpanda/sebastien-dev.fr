@@ -43,12 +43,13 @@
             </a>
         </div>
 
-        <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8 text-sm text-muted-foreground">
+        <nav>
             <app-navigation-item/>
         </nav>
 
-        <div class="flex flex-col sm:flex-row items-center justify-between w-full text-sm text-muted-foreground">
-            <div class="flex items-center gap-4">
+        <div
+            class="flex flex-col sm:flex-row items-center justify-between w-full text-sm mt-8">
+            <div class="flex flex-wrap items-center gap-4">
                 <p>© {{ currentYear }} Sébastien. Tous droits réservés.</p>
                 <a routerLink="/mentions-legales" class="hover:text-primary transition-colors">
                     Mentions légales
@@ -65,7 +66,6 @@
                     } @else {
                         <lucide-icon [img]="Moon"/>
                     }
-
                     Changer de thème
                 </button>
             </div>

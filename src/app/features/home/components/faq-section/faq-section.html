@@ -9,8 +9,8 @@
         </div>
         <div class="mt-12 flex flex-col gap-4">
             @for (faq of faqItems(); track faq.question) {
-                <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                    <input type="radio" name="my-accordion-3" checked="checked"/>
+                <div class="collapse collapse-plus bg-base-100 border-base-300 border">
+                    <input type="checkbox"/>
                     <div class="collapse-title font-semibold">
                         {{ faq.question }}
                     </div>

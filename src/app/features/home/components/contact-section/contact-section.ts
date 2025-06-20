@@ -123,10 +123,10 @@ export class ContactSection {
                 to: email,
                 subject: `Nouveau message via le portfolio : ${service}`,
                 html: `
-        <p><strong>Nom :</strong> ${name}</p>
-        <p><strong>Email :</strong> ${email}</p>
-        <p><strong>Message :</strong><br/>${message}</p>
-        <p><strong>Service :</strong> ${service}</p>
+                    <p><strong>Nom :</strong> ${name}</p>
+                    <p><strong>Email :</strong> ${email}</p>
+                    <p><strong>Message :</strong><br/>${message}</p>
+                    <p><strong>Service :</strong> ${service}</p>
       `,
             }),
         })
@@ -134,6 +134,9 @@ export class ContactSection {
             .then(data => {
                 console.log('✅ Message envoyé avec succès', data);
                 this.form.reset();
+                toast.success('Message envoyé avec succès', {
+                    description: 'Nous vous répondrons dans les plus brefs délais.',
+                });
             })
             .catch(err => {
                 console.error('❌ Erreur lors de l’envoi', err);

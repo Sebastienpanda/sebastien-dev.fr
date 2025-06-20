@@ -1,4 +1,4 @@
-<ul class="flex gap-6 text-sm" [class]="class()">
+<ul class="flex flex-wrap gap-6 text-sm" [class]="class()">
     @for (navigationItem of navigationItems(); track navigationItem.label) {
         <li>
             <a [attr.href]="navigationItem.link" (click)="setActiveAnchor(navigationItem.link); toggleMenu.emit()"

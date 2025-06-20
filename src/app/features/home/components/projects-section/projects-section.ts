@@ -44,7 +44,7 @@ export class ProjectsSection {
             tags: ['Frontend', 'HTML', 'CSS'],
             image: '/images/product-view.jpg',
             description: `• Création d'une page produit de beauté\n• Intégration d'images et de typographie\n`,
-            link: 'https://sebastienpanda.github.io/Product-preview-card-component/',
+            link: 'https://product-view-card.sebastien-dev.fr/',
         },
         {
             title: 'Page de Recette - Frontend Mentor',
