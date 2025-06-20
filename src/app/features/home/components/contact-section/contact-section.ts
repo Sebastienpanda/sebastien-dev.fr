@@ -116,7 +116,7 @@ export class ContactSection {
 
         const { name, email, message, service } = this.form.value;
 
-        fetch('http://localhost:54321/functions/v1/resend', {
+        fetch('https://nslpaikihqnwfssmeauz.supabase.co/functions/v1/resend', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
