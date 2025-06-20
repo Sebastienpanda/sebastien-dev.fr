@@ -1,0 +1,14 @@
+<ul class="flex gap-6 text-sm" [class]="class()">
+    @for (navigationItem of navigationItems(); track navigationItem.label) {
+        <li>
+            <a [attr.href]="navigationItem.link" (click)="setActiveAnchor(navigationItem.link); toggleMenu.emit()"
+               [class.text-primary]="activeAnchor() === navigationItem.link"
+               class="relative py-2 transition-colors group">
+                {{ navigationItem.label }}
+                <span
+                    class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"
+                ></span>
+            </a>
+        </li>
+    }
+</ul>

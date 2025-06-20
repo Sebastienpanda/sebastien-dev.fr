@@ -1,0 +1,27 @@
+<div
+    class="card bg-base-200 shadow-lg"
+>
+    <div class="card-body h-54">
+        <div class="flex items-start gap-3 mb-4">
+            <lucide-icon [img]="CheckIcon" class="h-5 w-5 text-success mt-0.5 flex-shrink-0"/>
+            <h3 class="card-title text-base text-base-content">
+                {{ title() }}
+            </h3>
+        </div>
+        <p class="text-base-content/80 mb-6">
+            {{ description() }}
+        </p>
+        <div class="card-actions">
+            <button
+                class="btn btn-outline group hover:bg-primary hover:text-primary-content hover:border-primary transition duration-300"
+                (click)="handleContact(id())"
+            >
+                <lucide-icon
+                    [img]="Mail"
+                    class="mr-2 h-4 w-4 transition-colors duration-300 group-hover:text-primary-content"
+                />
+                Me contacter pour ce service
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+<section id="testimonials" class="bg-base-200">
+    <div class="container py-12">
+        <div class="space-y-4 text-center">
+            <h2 class="text-3xl font-bold">Ce que disent mes clients</h2>
+            <div class="w-16 h-1 bg-primary rounded-full mx-auto"></div>
+        </div>
+        <swiper-container
+            class="mySwiper mt-8 pb-12"
+            #swiperRef
+            init="false"
+        >
+            @for (testimonial of testimonials(); track testimonial.id) {
+                <swiper-slide>
+                    <div class="card bg-base-100 shadow-lg max-w-4xl mx-auto min-h-[320px] md:min-h-[260px]">
+                        <div class="card-body text-center px-6 py-8 space-y-4 flex flex-col justify-between">
+                            <div class="text-warning text-lg">
+                                ★★★★★
+                            </div>
+
+                            <p class="text-lg italic relative">
+                                <span class="text-3xl absolute -left-4 -top-4 text-base-content/70">“</span>
+                                {{ testimonial.content }}
+                                <span class="text-3xl absolute -right-4 -bottom-4 text-base-content/70">”</span>
+                            </p>
+
+                            <div class="mt-4">
+                                <p class="font-bold text-base-content">{{ testimonial.name }}</p>
+                                <p class="text-sm text-base-content/60">{{ testimonial.position }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </swiper-slide>
+            }
+        </swiper-container>
+        <div class="flex justify-center gap-3 mt-2" aria-label="Navigation du carrousel">
+            <button
+                type="button"
+                class="btn btn-sm btn-circle border border-base-content text-primary bg-base-100 hover:bg-base-200 transition"
+                #prevEl
+                aria-label="Slide précédente"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                >
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+
+            <button
+                type="button"
+                class="btn btn-sm btn-circle border border-base-content text-primary bg-base-100 hover:bg-base-200 transition"
+                #nextEl
+                aria-label="Slide suivante"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                >
+                    <path d="M9 6l6 6-6 6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>

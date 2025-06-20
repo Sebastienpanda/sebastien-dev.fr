@@ -1,0 +1,24 @@
+<section id="faq" class="bg-base-200">
+    <div class="container pb-24">
+        <div class="space-y-4 text-center">
+            <h2 id="faq-title" class="text-3xl font-bold">Questions fréquentes</h2>
+            <div class="w-16 h-1 bg-primary rounded-full mx-auto"></div>
+            <p class="text-base-content max-w-2xl mx-auto">
+                Tout ce que vous devez savoir
+            </p>
+        </div>
+        <div class="mt-12 flex flex-col gap-4">
+            @for (faq of faqItems(); track faq.question) {
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" checked="checked"/>
+                    <div class="collapse-title font-semibold">
+                        {{ faq.question }}
+                    </div>
+                    <div class="collapse-content text-sm">
+                        {{ faq.answer }}
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

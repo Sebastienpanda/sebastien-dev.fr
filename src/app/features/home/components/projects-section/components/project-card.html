@@ -1,0 +1,43 @@
+<div class="card bg-base-100 shadow-sm transition-all hover:shadow-md h-full flex flex-col">
+    <!-- Image -->
+    <figure class="aspect-video">
+        <img
+            [src]="image()"
+            [alt]="title()"
+            class="w-full h-full object-cover rounded-t"
+        />
+    </figure>
+
+    <!-- Corps de la carte -->
+    <div class="card-body flex flex-col flex-grow">
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-2 mb-2">
+            @for (tag of tags(); track tag) {
+                <app-tags [tag]="tag"/>
+            }
+        </div>
+
+        <!-- Titre + description -->
+        <h3 class="card-title">{{ title() }}</h3>
+        <p class="text-base-content/70 whitespace-pre-line mb-4">
+            {{ description() }}
+        </p>
+
+        @if (link() === "#") {
+            <p class="text-sm text-base-content/70">
+                Ce projet est en cours de développement.
+            </p>
+        } @else {
+            <div class="card-actions mt-auto pt-2">
+                <a
+                    [href]="link()"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline btn-sm"
+                >
+                    Voir le projet
+                </a>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,82 @@
+<section id="contact" #contactSection>
+    <div class="container py-12 mt-12">
+        <div class="space-y-4 text-center">
+            <h2 class="text-3xl font-bold">Contact</h2>
+            <div class="w-16 h-1 bg-primary rounded-full mx-auto"></div>
+            <p class="text-base-content/70 max-w-2xl mx-auto">
+                Travaillons ensemble
+            </p>
+        </div>
+        <div class="card bg-base-100 shadow-lg border border-base-300 mt-12 pb-12">
+            <div class="card-body p-8">
+                <h3 class="card-title text-xl justify-center mb-6">Discutons de votre projet !</h3>
+                <p class="text-base-content/70 mb-8 text-center">
+                    Je suis disponible pour des missions freelance, à distance ou en collaboration avec vos équipes.
+                </p>
+            </div>
+            <form class="space-y-6 w-full px-4 md:w-1/2 md:mx-auto" [formGroup]="form" (submit)="onSubmit()">
+                <div class="flex flex-col gap-2">
+                    <label for="name" class="label">
+                        <span>Nom</span>
+                    </label>
+                    <input id="name" type="text" placeholder="Votre nom"
+                           formControlName="name" class="input w-full"
+                           [class.input-error]="nameErrors"/>
+                    @if (nameErrors) {
+                        <span class="text-error text-sm">{{ nameErrors }}</span>
+                    }
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label for="email" class="label">
+                        <span>Email</span>
+                    </label>
+                    <input id="email"
+                           formControlName="email" type="email" placeholder="Votre email" class="input w-full"
+                           [class.input-error]="emailErrors"/>
+                    @if (emailErrors) {
+                        <span class="text-error text-sm">{{ emailErrors }}</span>
+                    }
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label for="message" class="label">
+                        <span>Message</span>
+                    </label>
+                    <textarea
+                        id="message"
+                        [placeholder]="placeholder()"
+                        class="textarea w-full"
+                        formControlName="message"
+                        [class.textarea-error]="messageErrors"
+                    ></textarea>
+                    @if (messageErrors) {
+                        <span class="text-error text-sm">{{ messageErrors }}</span>
+                    }
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label for="subject" class="label">
+                        <span>Sujet</span>
+                    </label>
+                    <select class="select w-full" [value]="selectedServiceId() ?? ''"
+                            (change)="selectedServiceId.set($any($event.target).value)"
+                            formControlName="service"
+                            [class.select-error]="serviceErrors">
+                        <option disabled selected>Sélectionnez un service</option>
+                        @for (service of services(); track service.id) {
+                            <option [value]="service.id">
+                                {{ service.label }}
+                            </option>
+                        }
+                    </select>
+                    @if (serviceErrors) {
+                        <span class="text-error text-sm">{{ serviceErrors }}</span>
+                    }
+                </div>
+                <div class="flex justify-center mt-12">
+                    <button type="submit" class="btn btn-primary w-full">
+                        Envoyer
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+<section id="services" class="bg-base-100 mb-40">
+    <div class="container my-12">
+        <div class="space-y-4 text-center">
+            <h2 class="text-3xl font-bold text-base-content">Services</h2>
+            <div class="w-16 h-1 bg-primary rounded-full mx-auto"></div>
+            <p class="text-base-content/80">
+                Ce que je propose
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            @for (service of services(); track service.title) {
+                <app-service-item
+                    [title]="service.title"
+                    [description]="service.description"
+                    [id]="service.id"
+                />
+            }
+        </div>
+    </div>
+</section>

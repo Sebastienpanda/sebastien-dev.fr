@@ -1,0 +1,74 @@
+<footer class="py-12 px-4 border-t">
+    <div class="container flex flex-col items-center">
+        <div class="mb-8">
+            <a href="#" class="flex items-center">
+                <img
+                    src="/Logo.svg"
+                    alt="Logo Sébastien"
+                    class="h-8 w-auto"
+                />
+            </a>
+        </div>
+
+        <div class="flex justify-center gap-6 mb-8">
+            <a
+                href="https://www.malt.fr/profile/sebastienfreelance"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group p-2 rounded-full border transition-colors hover:bg-primary"
+                aria-label="Malt"
+            >
+                <lucide-icon [img]="Mail"
+                             class="h-5 w-5 text-base-content group-hover:text-base-100 transition-colors duration-300 ease-in-out"/>
+            </a>
+            <a
+                href="https://www.linkedin.com/in/sebastien-daufresne/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group p-2 rounded-full border transition-colors hover:bg-primary"
+                aria-label="LinkedIn"
+            >
+                <lucide-icon [img]="Linkedin"
+                             class="h-5 w-5 text-base-content group-hover:text-base-100 transition-colors duration-300 ease-in-out"/>
+            </a>
+            <a
+                href="https://github.com/Sebastienpanda"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group p-2 rounded-full border transition-colors hover:bg-primary"
+                aria-label="GitHub"
+            >
+                <lucide-icon [img]="Github"
+                             class="h-5 w-5 text-base-content group-hover:text-base-100 transition-colors duration-300 ease-in-out"/>
+            </a>
+        </div>
+
+        <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8 text-sm text-muted-foreground">
+            <app-navigation-item/>
+        </nav>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between w-full text-sm text-muted-foreground">
+            <div class="flex items-center gap-4">
+                <p>© {{ currentYear }} Sébastien. Tous droits réservés.</p>
+                <a routerLink="/mentions-legales" class="hover:text-primary transition-colors">
+                    Mentions légales
+                </a>
+            </div>
+            <div class="flex items-center gap-2 mt-4 sm:mt-0">
+                <button
+                    type="button"
+                    (click)="toggleTheme()"
+                    class="flex items-center gap-2 text-sm mt-8 transition hover:text-primary cursor-pointer"
+                >
+                    @if (themeService.theme() === 'light') {
+                        <lucide-icon [img]="Sun"/>
+                    } @else {
+                        <lucide-icon [img]="Moon"/>
+                    }
+
+                    Changer de thème
+                </button>
+            </div>
+        </div>
+    </div>
+</footer>
