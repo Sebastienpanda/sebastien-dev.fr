@@ -15,4 +15,5 @@ export class ProjectCard {
     readonly tags = input<string[]>([]);
     readonly image = input('');
     readonly link = input('');
+    readonly github = input('');
 }

@@ -17,6 +17,7 @@ export class ProjectsSection {
             image: '/images/petiteboutiquedephee.png',
             description: `Site e-commerce développé de A à Z avec Angular & Supabase.\n\n• UI responsive (Tailwind, DaisyUI, animations Angular)\n• Authentification (Supabase, Google)\n• Paiement Stripe\n• Traitement d'images Supabase\n• Wishlist, favoris, chat en temps réel, Paiement, Ticket tools\n`,
             link: '#',
+            github: '',
         },
         {
             title: 'Dashboard Admin',
@@ -24,6 +25,7 @@ export class ProjectsSection {
             image: '/images/dashboard.png',
             description: `Dashboard Admin développé avec Angular & Supabase.\n\n• UI responsive (Tailwind, DaisyUI, animations Angular)\n• Authentification (Supabase, Google)\n• Gestion des utilisateurs, des produits et des commandes\n• Graphiques et statistiques en temps réel\n`,
             link: '#',
+            github: '',
         },
         {
             title: 'Testimonials grid section - Frontend Mentor',
@@ -31,6 +33,7 @@ export class ProjectsSection {
             image: '/images/testimonials.jpg',
             description: `• Création d'une section Testimonials avec Grid\n`,
             link: 'https://testimonials.sebastien-dev.fr/',
+            github: 'https://github.com/Sebastienpanda/testimonials-grid-section',
         },
         {
             title: 'Blog Preview Card Component - Frontend Mentor',
@@ -38,6 +41,7 @@ export class ProjectsSection {
             image: '/images/blog-preview-card.jpg',
             description: `• Création d'un composant de carte de blog\n• Intégration d'images et de typographie responsive\n`,
             link: 'https://blog-preview.sebastien-dev.fr/',
+            github: 'https://github.com/Sebastienpanda/Blog-preview-card',
         },
         {
             title: 'Produit de beauté - Frontend Mentor',
@@ -45,6 +49,7 @@ export class ProjectsSection {
             image: '/images/product-view.jpg',
             description: `• Création d'une page produit de beauté\n• Intégration d'images et de typographie\n`,
             link: 'https://product-view-card.sebastien-dev.fr/',
+            github: 'https://github.com/Sebastienpanda/Product-preview-card-component',
         },
         {
             title: 'Page de Recette - Frontend Mentor',
@@ -52,6 +57,7 @@ export class ProjectsSection {
             image: '/images/recipe-recette.jpg',
             description: `• Création d'une page de recette\n• Intégration d'images et de typographie responsive\n`,
             link: 'https://recipe.sebastien-dev.fr/',
+            github: 'https://github.com/Sebastienpanda/Recipe-page',
         },
     ];
 
