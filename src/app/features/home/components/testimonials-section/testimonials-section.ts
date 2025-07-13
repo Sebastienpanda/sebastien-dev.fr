@@ -10,6 +10,12 @@ export class TestimonialsSection implements AfterViewInit {
     readonly testimonials = signal([
         {
             id: 1,
+            name: 'Cedric Locchi',
+            position: 'Directeur',
+            content: 'J’ai eu l’occasion d’accompagner Sébastien en tant que mentor dans le cadre de sa formation. C’est quelqu’un de très intéressant, avec une grande capacité d’apprentissage et une vraie faculté à se remettre en question. Je suis convaincu que les entreprises qui auront la chance de collaborer avec lui ne seront pas déçues.',
+        },
+        {
+            id: 2,
             name: 'Philippe Anel',
             position: 'Directeur',
             content: 'Sébastien a rejoint notre équipe il y a un an. Avec sa motivation et son engagement, il a conforté ses compétences en développement web (Vue.js et React) ainsi qu\'en gestion de projet. Par ailleurs, il a beaucoup travaillé sur la partie back (API, Swagger en Go en Node et même un peu en Rust).\n' +
@@ -25,25 +31,25 @@ export class TestimonialsSection implements AfterViewInit {
                 'Nous sommes ravis de avoir eu la chance de l\'accompagner dans sa formation et nous sommes impatients de voir ses prochaines réalisations.\n',
         },
         {
-            id: 2,
+            id: 3,
             name: 'Aurore Ramos',
             position: 'Développeuse',
             content: 'J\'ai eu l\'occasion de travailler avec Sébastien. C\'est un excellent développeur qui est à l\'écoute, compétent et sympa. Je recommande fortement 👍👍',
         },
         {
-            id: 3,
+            id: 4,
             name: 'Julie Bettinger',
             position: 'Particulier',
             content: 'J\'ai sollicité Sébastien pour le site vitrine de mon entreprise et il s\'est montré consciencieux et à l\'écoute de mes demandes. C\'est une personne sérieuse et fiable, engagée au service de ses projets.',
         },
         {
-            id: 4,
+            id: 5,
             name: 'Stéphane Didier',
             position: 'Mentor',
             content: 'J\'ai accompagné Sébastien sur sa formation de développeur WEB. C\'est un développeur de talent, qui est fiable. Je recommande',
         },
         {
-            id: 5,
+            id: 6,
             name: 'Gautier Vincent',
             position: 'Particulier',
             content: 'Réalisation et conception du site vitrine de la cave avec force de proposition tout au long de la réalisation.',
