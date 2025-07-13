@@ -60,22 +60,6 @@ export class ProjectsSection {
             link: 'https://blog-preview.sebastien-dev.fr/',
             github: 'https://github.com/Sebastienpanda/Blog-preview-card',
         },
-        {
-            title: 'Produit de beauté - Frontend Mentor',
-            tags: ['Frontend', 'HTML', 'CSS'],
-            image: '/images/product-view.jpg',
-            description: `• Création d'une page produit de beauté\n• Intégration d'images et de typographie\n`,
-            link: 'https://product-view-card.sebastien-dev.fr/',
-            github: 'https://github.com/Sebastienpanda/Product-preview-card-component',
-        },
-        {
-            title: 'Page de Recette - Frontend Mentor',
-            tags: ['Frontend', 'HTML', 'CSS'],
-            image: '/images/recipe-recette.jpg',
-            description: `• Création d'une page de recette\n• Intégration d'images et de typographie responsive\n`,
-            link: 'https://recipe.sebastien-dev.fr/',
-            github: 'https://github.com/Sebastienpanda/Recipe-page',
-        },
     ];
 
     readonly allTags = Array.from(
